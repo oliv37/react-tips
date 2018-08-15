@@ -11,7 +11,7 @@ import Example2 from './examples/Example2.component';
 
 const ListsKeys = ({match}) => (
     <React.Fragment>
-        <ul className="nav nav-pills nav-fill">
+        <ul className="nav nav-tabs nav-fill">
             <NavItem to={`${match.url}/0`} label="Basic Example" />
             <NavItem to={`${match.url}/1`} label="Inputs Example" />
             <NavItem to={`${match.url}/2`} label="Multiple Lists" />

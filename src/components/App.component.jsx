@@ -5,6 +5,7 @@ import {
     Switch,
     Redirect,
   } from 'react-router-dom';
+  import { ToastContainer } from 'react-toastify';
 
   import NavItem from './NavItem.component';
   import ListsKeys from './keys/ListsKeys.component';
@@ -12,7 +13,7 @@ import {
 const App = () => (
     <BrowserRouter>
         <React.Fragment>
-            <ul className="nav nav-pills">
+            <ul className="nav nav-pills my-2">
                 <NavItem to="/keys" label="Lists and Keys" />
                 <NavItem to="/selectors" label="Selectors (with redux)" />
             </ul>
@@ -22,6 +23,8 @@ const App = () => (
                 <Route path="/selectors" render={() => <div>Selectors</div>} />
                 <Redirect to="/keys" />
             </Switch>
+
+            <ToastContainer autoClose={2500} hideProgressBar={true} />
         </React.Fragment>
     </BrowserRouter>
 );

@@ -1,6 +1,7 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const names = [
+const NAMES = [
     'Jim',
     'John',
     'Paul',
@@ -12,11 +13,18 @@ class Example0 extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { names: [...names] };
+        this.state = { names: [...NAMES] };
     }
 
-    handleClick = () => {
+    handleSubmit = (event) => {
+        event.preventDefault();
+
         const name = this.inputElement.value;
+
+        if (this.state.names.indexOf(name) !== -1) {
+            toast.error(`${name} existe déjà`);
+            return;
+        }
 
         this.setState(prevState => ({
             names: [name, ...prevState.names]
@@ -31,13 +39,23 @@ class Example0 extends React.Component {
         */
 
         const content = this.state.names.map((name, index) => (
-            <div key={name}>{name}</div>
+            <div key={index}>{name}</div>
         ));
 
         return (
             <React.Fragment>
-                <input type="text" ref={el => this.inputElement = el} />
-                <button onClick={this.handleClick}>Add Begining</button>
+                <form onSubmit={this.handleSubmit} className="form-inline my-2">
+                    <div className="form-group mr-2">
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            ref={el => this.inputElement = el} 
+                        />
+                    </div>
+                    <button className="btn btn-success" type="submit">
+                        Add
+                    </button>
+                </form>
 
                 <div>{content}</div>
             </React.Fragment>
