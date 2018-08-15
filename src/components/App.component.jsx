@@ -9,6 +9,7 @@ import {
 
   import NavItem from './NavItem.component';
   import ListsKeys from './keys/ListsKeys.component';
+  import Selectors from './selectors/Selectors.component';
 
 const App = () => (
     <BrowserRouter>
@@ -20,11 +21,11 @@ const App = () => (
 
             <Switch>
                 <Route path="/keys" component={ListsKeys} />
-                <Route path="/selectors" render={() => <div>Selectors</div>} />
+                <Route path="/selectors" component={Selectors} />
                 <Redirect to="/keys" />
             </Switch>
 
-            <ToastContainer autoClose={2500} hideProgressBar={true} />
+            <ToastContainer autoClose={3000} hideProgressBar={true} />
         </React.Fragment>
     </BrowserRouter>
 );
