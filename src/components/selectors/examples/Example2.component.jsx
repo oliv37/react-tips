@@ -33,8 +33,7 @@ class Example2 extends React.Component {
         toast.info("Render");
         const {ingredients, types} = this.props;
 
-        const content = ingredients
-        .map(({name, type}) => {
+        const content = ingredients.map(({name, type}) => {
             const className = classNames({
                 'text-success': type === GREEN_TYPE,
                 'text-primary': type === BLUE_TYPE
