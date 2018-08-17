@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
 import { createSelector } from 'reselect'
-import classNames from 'classnames';
 import { GREEN_TYPE, BLUE_TYPE } from '../utils';
+import Ingredient from '../Ingredient.component';
 
 const getIngredients = createSelector(
     state => state.ingredients,
@@ -33,14 +33,9 @@ class Example2 extends React.Component {
         toast.info("Render");
         const {ingredients, types} = this.props;
 
-        const content = ingredients.map(({name, type}) => {
-            const className = classNames({
-                'text-success': type === GREEN_TYPE,
-                'text-primary': type === BLUE_TYPE
-            });
-
-            return <div key={name} className={className}>{name}</div>
-        });
+        const content = ingredients.map(
+            ({name, type}) => <Ingredient key={name} name={name} type={type} />
+        );
 
         return (
             <div className="my-2 text-center">

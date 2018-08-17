@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
 
 import { BLUE_TYPE, GREEN_TYPE, filterByType } from '../utils';
+import Ingredient from '../Ingredient.component';
 
 class Example0 extends React.Component {
 
@@ -15,12 +16,12 @@ class Example0 extends React.Component {
 
         const {blueIngredients, greenIngredients} = this.props;
 
-        const blueContent = blueIngredients.map(ingredient =>
-            <div key={ingredient.name}>{ingredient.name}</div>
+        const blueContent = blueIngredients.map(ingredient => 
+            <Ingredient key={ingredient.name} name={ingredient.name} type={ingredient.type} />
         );
 
-        const greenContent = greenIngredients.map(ingredient =>
-            <div key={ingredient.name}>{ingredient.name}</div>
+        const greenContent = greenIngredients.map(ingredient => 
+            <Ingredient key={ingredient.name} name={ingredient.name} type={ingredient.type} />
         );
 
         return (

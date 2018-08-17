@@ -3,7 +3,7 @@ export const GREEN_TYPE = 'GREEN';
 
 const INGREDIENTS = [
     {
-        name: 'surimi',
+        name: 'banane',
         type: GREEN_TYPE
     },
     {
@@ -11,15 +11,15 @@ const INGREDIENTS = [
         type: BLUE_TYPE
     },
     {
-        name: 'emmental',
+        name: 'carotte',
         type: GREEN_TYPE
     },
     {
-        name: 'melon',
+        name: 'kiwi',
         type: BLUE_TYPE
     },
     {
-        name: 'pastèque',
+        name: 'orange',
         type: BLUE_TYPE
     },
     
