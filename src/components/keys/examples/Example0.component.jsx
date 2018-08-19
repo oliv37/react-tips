@@ -4,8 +4,7 @@ import { toast } from 'react-toastify';
 const NAMES = [
     'Jim',
     'John',
-    'Paul',
-    'Zak'
+    'Paul'
 ];
 
 class Example0 extends React.Component {
@@ -39,7 +38,7 @@ class Example0 extends React.Component {
         */
 
         const content = this.state.names.map((name, index) => (
-            <div key={index}>{name}</div>
+            <li key={index}>{name}</li>
         ));
 
         return (
@@ -57,7 +56,7 @@ class Example0 extends React.Component {
                     </button>
                 </form>
 
-                <div>{content}</div>
+                <ul>{content}</ul>
             </React.Fragment>
         );
     }

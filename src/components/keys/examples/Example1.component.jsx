@@ -1,6 +1,6 @@
 import React from 'react';
 
-const INPUTS = ['input0', 'input1', 'input2'];
+const INPUTS = ['input0', 'input1'];
 
 class Example1 extends React.Component {
 
@@ -25,7 +25,7 @@ class Example1 extends React.Component {
 
         const content = this.state.inputs.map(
             (name, index) => (
-                <div key={name} className="my-1">
+                <div key={index} className="my-1">
                     <span>{name} : </span>
                     <input type="text" />
                 </div>
