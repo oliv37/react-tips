@@ -9,7 +9,7 @@ const store = createStore((state = initialState) => state);
 class Hello extends React.Component {
     
     render() {
-        return <div>Hello {this.props.name}</div>
+        return <div>Hello {this.props.name}</div>;
     }
 }
 
