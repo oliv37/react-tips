@@ -4,7 +4,7 @@ import {
     Switch,
     Redirect,
   } from 'react-router-dom';
-  import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 
 import NavItem from 'components/NavItem.component';
 import Example0 from './examples/Example0.component';

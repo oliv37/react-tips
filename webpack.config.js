@@ -4,7 +4,8 @@ module.exports = {
   mode: 'development',
   entry: {
     main: './src/main.jsx',
-    hello: './src/hello.jsx'
+    hello: './src/hello.jsx',
+    helloRedux: './src/helloRedux.jsx'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
