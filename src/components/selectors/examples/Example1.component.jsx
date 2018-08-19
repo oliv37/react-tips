@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
-import { createSelector } from 'reselect'
+import { createSelector } from 'reselect';
 
 import { BLUE_TYPE, GREEN_TYPE, filterByType } from '../utils';
 import Ingredient from '../Ingredient.component';
