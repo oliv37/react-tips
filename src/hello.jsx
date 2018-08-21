@@ -12,8 +12,11 @@ const HelloFunctionnal = (props) => {
     return <div>Hello {props.name} from Functional Component</div>;
 };
 
-class List extends React.Component {
+ReactDOM.render(<Hello name="john" />, document.getElementById("main"));
 
+/*
+class List extends React.Component {
+    
     render() {
         return (
             <ul>
@@ -23,7 +26,6 @@ class List extends React.Component {
     }
 }
 
-ReactDOM.render(<Hello name="john" />, document.getElementById("main"));
-
-// const NAMES = ['Jim', 'John', 'Paul'];
-// ReactDOM.render(<List names={NAMES} />, document.getElementById("main"));
+const NAMES = ['Jim', 'John', 'Paul'];
+ReactDOM.render(<List names={NAMES} />, document.getElementById("main"));
+*/
